@@ -16,10 +16,10 @@ public class PasswordCheck {
           for (int a = 0; a < pass.length(); ++a) {
             if (Character.isDigit(pass.charAt(a))) {
               ++b;
-              System.out.println(pass.length());
+            
             }
               if (b >= 2) {
-                System.out.println(b);
+              
               yes = true;
             }
             if (!Character.isLetterOrDigit(pass.charAt(a))) {
