@@ -5,20 +5,35 @@ import java.util.Scanner;
 public class Palindrome {
     public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
-        boolean Palindrome;
         int a;
         a = input.nextInt();
-        int p [] = new int [a];        
-        for (int i = 0; i < p.length; ++i) {
-          p [i] = input.nextInt();
+        int b = a;
+        int c = b;
+        assert a > 0 : "Fehler";
+        int e = 1;
+        while ((a / 10) != 0) {
+          ++e;
+          a = a / 10;
         }
-        if (p [0] == p [p.length - 1]) {
-          Palindrome = true;
-        } else {
-          Palindrome = false;
-        }
-        System.out.println("Palindrome: " + Palindrome);
 
-        
+        int d [] = new int [e];
+        for (int i = 0; i < d.length; ++i) {
+          d [i] = b % 10;
+
+          b = b / 10;
+
+        }
+        int h = 0;
+
+        for (int s = 0; s < d.length; ++s) {
+          h = h * 10;
+          h = h + d[s];          
+        }
+        if (h == c) {
+          System.out.println("Palindrome: true!");
+        } else {
+          System.out.println("Palindrome: false!");
+        }
+
     }
 }
